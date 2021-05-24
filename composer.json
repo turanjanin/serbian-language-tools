@@ -1,0 +1,40 @@
+{
+    "name": "turanjanin/serbian-language-tools",
+    "description": "Set of tools for tokenization, transliteration and diacritic restoration of a text written in Serbian language.",
+    "version": "1.0.0",
+    "type": "library",
+    "keywords": [
+        "serbian", "diacritics", "diacritic restoration", "transliteration", "cyrillic", "latin",
+        "cyrillization", "latinisation", "tokenizer", "celava latinica", "srpski"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jovan Turanjanin",
+            "email": "jovan@turanjanin.net",
+            "homepage": "https://www.turanjanin.net"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-sqlite3": "*",
+        "ext-intl": "*",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Turanjanin\\SerbianLanguageTools\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Turanjanin\\SerbianLanguageTools\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
