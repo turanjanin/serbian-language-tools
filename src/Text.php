@@ -15,12 +15,14 @@ class Text implements \ArrayAccess, \Countable, \Iterator
         $this->tokens = $tokens;
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->tokens[$offset]);
     }
 
     /** @return \Turanjanin\SerbianLanguageTools\Tokens\Token */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         if (!isset($this->tokens[$offset])) {
@@ -30,6 +32,7 @@ class Text implements \ArrayAccess, \Countable, \Iterator
         return $this->tokens[$offset];
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -39,37 +42,44 @@ class Text implements \ArrayAccess, \Countable, \Iterator
         }
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->tokens[$offset]);
     }
 
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return count($this->tokens);
     }
 
     /** @return \Turanjanin\SerbianLanguageTools\Tokens\Token */
+    #[\ReturnTypeWillChange]
     public function current()
     {
         return $this->tokens[$this->position];
     }
 
+    #[\ReturnTypeWillChange]
     public function next()
     {
         ++$this->position;
     }
 
+    #[\ReturnTypeWillChange]
     public function key()
     {
         return $this->position;
     }
 
+    #[\ReturnTypeWillChange]
     public function valid()
     {
         return isset($this->tokens[$this->position]);
     }
 
+    #[\ReturnTypeWillChange]
     public function rewind()
     {
         $this->position = 0;
