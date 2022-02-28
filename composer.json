@@ -1,7 +1,7 @@
 {
     "name": "turanjanin/serbian-language-tools",
     "description": "Set of tools for tokenization, transliteration and diacritic restoration of a text written in Serbian language.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "type": "library",
     "keywords": [
         "serbian", "diacritics", "diacritic restoration", "transliteration", "cyrillic", "latin",
