@@ -13,7 +13,7 @@ class ToCyrillic extends WordTransformer
 {
     protected Dictionary $dictionary;
 
-    public function __construct(Dictionary $dictionary = null)
+    public function __construct(?Dictionary $dictionary = null)
     {
         if ($dictionary === null) {
             $dictionary = new SqliteDictionary();

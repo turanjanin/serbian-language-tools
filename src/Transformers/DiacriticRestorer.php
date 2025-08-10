@@ -16,7 +16,7 @@ class DiacriticRestorer
 {
     protected Dictionary $dictionary;
 
-    public function __construct(Dictionary $dictionary = null)
+    public function __construct(?Dictionary $dictionary = null)
     {
         if ($dictionary === null) {
             $dictionary = new SqliteDictionary();
@@ -202,7 +202,7 @@ class DiacriticRestorer
         return $newText;
     }
 
-    protected function restoreDiacritics(Word $word, RestoredWord $preferredVariant = null): Word
+    protected function restoreDiacritics(Word $word, ?RestoredWord $preferredVariant = null): Word
     {
         $variants = $this->getVariants($word, $preferredVariant);
         if (empty($variants)) {
@@ -221,7 +221,7 @@ class DiacriticRestorer
     }
 
     /** @return \Turanjanin\SerbianLanguageTools\Tokens\RestoredWord[] */
-    protected function getVariants(Word $token, RestoredWord $preferredVariant = null): array
+    protected function getVariants(Word $token, ?RestoredWord $preferredVariant = null): array
     {
         $lowercaseString = strtolower($token->__toString());
 

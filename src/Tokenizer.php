@@ -195,7 +195,7 @@ class Tokenizer
         return $text;
     }
 
-    private function buildToken(array $characters, string $class = null): Token
+    private function buildToken(array $characters, ?string $class = null): Token
     {
         if ($class === null) {
             $class = $this->guessTokenClass($characters);
